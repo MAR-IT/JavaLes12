@@ -5,4 +5,5 @@ $.ajax({
   },
   error: function(){
     $('#divResult').append('Fout: er is iets fout gegaan')
-  });
+  }
+});
