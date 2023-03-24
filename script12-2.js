@@ -5,6 +5,6 @@ $(document).ready(function() {
       $('#divResult').html(data);
     },
     error: function(){
-      $('#divResult').append('Fout: er is iets fout gegaan');
+      $('#divResult').append('Fout: er is iets fout gegaan')
     })
   });
