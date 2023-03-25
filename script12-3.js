@@ -7,7 +7,7 @@ $.ajax({
   success: function(weather) {
     console.log(weather);
     $('h1').append(weather.name);
-    $('#temp').append(((weather.main.temp_min - 32)/1.8) + ' en ' + weather.main.temp_max + ' graden.');
+    $('#temp').append(weather.main.temp_min + ' en ' + weather.main.temp_max + ' graden.');
     $('#gevoel').append(weather.main.feels_like  + ' graden');
     $('#vocht').append(weather.main.humidity + '%');
   },
