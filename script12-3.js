@@ -1,7 +1,7 @@
 
 
 $.ajax({
-  url: 'https://api.openweathermap.org/data/2.5/weather?appid=8566d604cd9402b65394b034e52aa2af&q=Nijkerk&units=metric',
+  url: 'https://api.openweathermap.org/data/2.5/weather?q=Nijkerk,nl&appid=8566d604cd9402b65394b034e52aa2af&units=metric',
   dataType: 'jsonp',
   contentType: 'application/jsonp',
   success: function(weather) {
