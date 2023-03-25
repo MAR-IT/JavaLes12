@@ -14,12 +14,17 @@ $.ajax({
     const pond = data.rates.GBP;
     const yen = data.rates.JPY;
     $('button').on('click', function rekenen() {
-        let dollar = $('input').val();
+        let dollar = Math.round(($('input').val())*100)/100;
 
-        $('p').append(dollar + ' Amerikaanse dollar is omgerekend:');
-        $('#euro').append(dollar*euro);
-        $('#pond').append(dollar*pond);
-        $('#yen').append(dollar*pond);
+        if (isNaN(dollar)) {
+          alert('U heeft geen geldige waarde ingevoerd')
+        }
+        else {
+          $('p').html(dollar + ' Amerikaanse dollar is omgerekend:');
+          $('#euro').html(dollar*euro);
+          $('#pond').html(dollar*pond);
+          $('#yen').html(dollar*yen);
+        };
     });
   },
   error: function(){
